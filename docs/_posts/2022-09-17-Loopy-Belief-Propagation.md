@@ -1,10 +1,9 @@
 ---
 layout: post
 title: 'Loopy Belief Propagation - Python Implementation'
-date: '2022-09-17 11:02:00 -0100'
+date: '2022-09-17 11:02:00 +0200'
 categories: graph
 ---
-# Implementing Loopy Belief Propagation in Python
 
 The most parts were done by Jessical Stringham in her Notebook [here](https://jessicastringham.net/2019/01/09/sum-product-message-passing). I adapted it only a little to experiment with loopy belief propagation. Most credits are hers! I am really thankful that she has provided such a comprehensive explanation.
 

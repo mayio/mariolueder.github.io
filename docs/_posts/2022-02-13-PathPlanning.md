@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Path Planning with Quintic Functions in Frenét Coordinate System'
-date: '2022-09-17 11:02:00 -0100'
+date: '2022-09-17 11:02:00 +0200'
 categories: pathplanning
 ---
 # Path Planning with Quintic Functions in Frenét Coordinate System
