@@ -28,8 +28,8 @@ By switching from Cartesian to the Frenét reference frame it is possible to for
 
 ## Quintic Polynomials
 
-It can be shown that quintic (fifth-degree) polynomials are the jerk-optimal connection between a start state \(P_0 =
-[p_0, \dot{p}_0, \ddot{p}_0]\) (position, velocity, acceleration respectivly) and an end state \(P_0 = [p_1, \dot{p}_1, \ddot{p}_1]\) within the time interval \(T := t_1 − t_0\) in a one-dimensional problem.
+It can be shown that quintic (fifth-degree) polynomials are the jerk-optimal connection between a start state $$P_0 =
+[p_0, \dot{p}_0, \ddot{p}_0]$$ (position, velocity, acceleration respectivly) and an end state $$P_0 = [p_1, \dot{p}_1, \ddot{p}_1]$$ within the time interval $$T := t_1 − t_0$$ in a one-dimensional problem.
 
 Formulation of a quintic polynomial:
 $$
