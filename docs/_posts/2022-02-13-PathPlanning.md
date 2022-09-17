@@ -360,7 +360,7 @@ v_1 - v_0 - 2 \frac{\dot{v}_0}{2} \delta t \\
 \end{bmatrix}
 $$
 
-Using the quintic polynamial and its derivatives we may compute now $$d$$, $$\dot{d}$$, $$\ddot{d}$$ as well as $$s), $$\dot{s}$$, $$\ddot{s}$$ in the Frenét frame.
+Using the quintic polynamial and its derivatives we may compute now $$d$$, $$\dot{d}$$, $$\ddot{d}$$ as well as $$s$$, $$\dot{s}$$, $$\ddot{s}$$ in the Frenét frame.
 
 
 
