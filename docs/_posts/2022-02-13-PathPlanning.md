@@ -234,7 +234,7 @@ plt.show()
 ```
 
 
-![png](2022-02-13-PathPlanning_files/2022-02-13-PathPlanning_1_0.png)
+![png](https://raw.githubusercontent.com/mayio/mayio.github.io/master/docs/_posts/2022-02-13-PathPlanning_files/2022-02-13-PathPlanning_1_0.png)
 
 
 The trajectory is a function that converges smoothly towards the desired perpendicular offset. 
@@ -445,7 +445,7 @@ plt.show()
 ```
 
 
-![png](2022-02-13-PathPlanning_files/2022-02-13-PathPlanning_4_0.png)
+![png](https://raw.githubusercontent.com/mayio/mayio.github.io/master/docs/_posts/2022-02-13-PathPlanning_files/2022-02-13-PathPlanning_4_0.png)
 
 
 The main difference to the cubic function is that function for acceleration is now also smooth and free of jerk.
