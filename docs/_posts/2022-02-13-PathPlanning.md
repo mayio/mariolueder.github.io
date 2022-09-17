@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Path Planning with Quintic Functions in Frenét Coordinate System'
-date: '2022-09-17 11:02:00 +0200'
+date: '2022-02-13 11:02:00 +0200'
 categories: pathplanning
 ---
 # Path Planning with Quintic Functions in Frenét Coordinate System
@@ -21,15 +21,15 @@ Maneuvers of a car shall be as smooth as possible. Hard turns or hard decelerati
 Assume that a car is lateral misplaced from the desired lane and should return to the optimal position while making a compromise between comfort and duration of the maneuver. The same compromise has to be found for the speed of the car. It shall not drive too close to or too far from the vehicle in the front. Two cost function, lateral and longitudinal, can be utilized to minimize jerk. 
 
 
-![Fig. 2 in Paper: Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenét Frame.](https://raw.githubusercontent.com/mayio/pathplanning/master/_notebooks/PathPlanningImages/FrenetFig2.png)
+![Fig. 2 in Paper: Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenét Frame.](https://raw.githubusercontent.com/mayio/pathplanning/master/PathPlanningImages/FrenetFig2.png)
 *Fig. 2 in Paper: Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenét Frame.*
 
-By switching from Cartesian to the Frenét reference frame it is possible to formulate a one dimensional trajectory with the root point $\vec{r}$ along the center line, the perpendicular offset $d$ and the covered arc length $s$. Jerk can be now defined as the derivatives $\dddot{d}$ and $\dddot{s}$. 
+By switching from Cartesian to the Frenét reference frame it is possible to formulate a one dimensional trajectory with the root point $\vec{r}$ along the center line, the perpendicular offset \(d\) and the covered arc length \(s\). Jerk can be now defined as the derivatives \(\dddot{d}\) and \(\dddot{s}\). 
 
 ## Quintic Polynomials
 
-It can be shown that quintic (fifth-degree) polynomials are the jerk-optimal connection between a start state $P_0 =
-[p_0, \dot{p}_0, \ddot{p}_0]$ (position, velocity, acceleration respectivly) and an end state $P_0 = [p_1, \dot{p}_1, \ddot{p}_1]$ within the time interval $T := t_1 − t_0$ in a one-dimensional problem.
+It can be shown that quintic (fifth-degree) polynomials are the jerk-optimal connection between a start state \(P_0 =
+[p_0, \dot{p}_0, \ddot{p}_0]\) (position, velocity, acceleration respectivly) and an end state \(P_0 = [p_1, \dot{p}_1, \ddot{p}_1]\) within the time interval \(T := t_1 − t_0\) in a one-dimensional problem.
 
 Formulation of a quintic polynomial:
 $$
@@ -45,7 +45,7 @@ $$
 \theta (t) = a_0 + a_1 t + a_2 t^2 + a_3 t^3 \tag{2}
 $$
 
-$\theta(t)$ can be seen as a distance or way one has go. The velocity and acceleration are the derivatives.
+\(\theta(t)\) can be seen as a distance or way one has go. The velocity and acceleration are the derivatives.
 
 $$
 \dot\theta (t) = a_1 + 2 a_2 t + 3 a_3 t^2 \tag{3}
@@ -56,7 +56,7 @@ $$
 
 ### Contraints for Cubic Polynomial Solution for Latitudinal Offset
 
-The car returns to its optimal position in a given time interval $T := t_1 − t_0$. The contraint values for pose and kinematic are seen relative. 
+The car returns to its optimal position in a given time interval \(T := t_1 − t_0\). The contraint values for pose and kinematic are seen relative. 
 
 $$
 \begin{matrix}
@@ -71,7 +71,7 @@ $$
 
 ### Find the Coefficents for the Cubic Polynomial Solution for Latitudinal Offset
 
-What we want is to find the coefficents $a_0, a_1, a_2, a_3$ for the cubic function using the contraints. We set the contraints into the equations (2), (3) and (4) for $t_0$ and $t_1$
+What we want is to find the coefficents \(a_0, a_1, a_2, a_3\) for the cubic function using the contraints. We set the contraints into the equations (2), (3) and (4) for \(t_0\) and \(t_1\)
 
 $$
 \begin{matrix}
@@ -80,7 +80,7 @@ $$
 \end{matrix}\tag{5}
 $$
 
-$\theta (t_0)$ is known from the contraints. Thus:
+\(\theta (t_0)\) is known from the contraints. Thus:
 $$
 a_0 = d
 $$
@@ -92,12 +92,12 @@ $$
 \dot\theta (t_0) = a_1 
 \end{matrix}\tag{6}
 $$
-And also $\dot\theta (t_0)$ is known from the contraints. Thus:
+And also \(\dot\theta (t_0)\) is known from the contraints. Thus:
 $$
 a_1 = \dot{d}
 $$
 
-The coefficients for time $t_1$ can be computed while inserting the previously found coefficients.
+The coefficients for time \(t_1\) can be computed while inserting the previously found coefficients.
 
 $$
 \begin{matrix}
@@ -107,7 +107,7 @@ $$
 \end{matrix}\tag{7}
 $$
 
-Velocity for $t_1$
+Velocity for \(t_1\)
 $$
 \begin{matrix}
 \dot\theta (t_1) = \dot{d} + 2 a_2 \delta t + 3 a_3 \delta t^2 \\ 
@@ -116,7 +116,7 @@ $$
 \end{matrix} \tag{8}
 $$
 
-We may solve for $a_2$ and $a_3$ now using linear algebra. The quadratic equations (7) and (8) can be expressed with $0 = A b + C$. 
+We may solve for \(a_2\) and \(a_3\) now using linear algebra. The quadratic equations (7) and (8) can be expressed with \(0 = A b + C\). 
 
 $$
 \begin{bmatrix}
@@ -139,7 +139,7 @@ d + \dot{d} \delta t \\
 \end{bmatrix}
 $$
 
-Lets rearrange and multiply with $A^{-1}$ we get
+Lets rearrange and multiply with \(A^{-1}\) we get
 
 $$
 \begin{matrix}
@@ -164,7 +164,7 @@ a_3 \\
 \end{bmatrix}
 $$ 
 
-The same can be done also in longitudinal direction for $s$;
+The same can be done also in longitudinal direction for \(s\);
 
 ### Python example
 
@@ -274,7 +274,7 @@ $$
 
 ### Solving for Coefficients
 
-Insert $t_0$ and the known constraint values into the quintic polynomial and its derivatives.
+Insert \(t_0\) and the known constraint values into the quintic polynomial and its derivatives.
 
 $$
 \begin{matrix}
@@ -287,7 +287,7 @@ a_2 = \frac{\dot{v}_0}{2}
 \end{matrix}
 $$
 
-The other three coefficients can be found by inserting $t_1$, contraints and the already computed coefficients into the quintic polynomial and its derivatives.
+The other three coefficients can be found by inserting \(t_1\), contraints and the already computed coefficients into the quintic polynomial and its derivatives.
 
 
 $$
@@ -311,7 +311,7 @@ v_1 - v_0 - 2 \frac{\dot{v}_0}{2} \delta t =  3 a_3 \delta t^2 + 4 a_4 \delta  t
 \end{matrix}
 $$
 
-Again, the coefficcients $a_3$, $a_4$ and $a_5$ can be be found with linear algebra. The above tree equation can be expressed as $C = A b$. 
+Again, the coefficcients \(a_3\), \(a_4\) and \(a_5\) can be be found with linear algebra. The above tree equation can be expressed as \(C = A b\). 
 
 $$
 \begin{bmatrix}
@@ -332,7 +332,7 @@ a_5 \\
 \end{bmatrix}
 $$
 
-Lets multiply with $A^{-1}$ we get
+Lets multiply with \(A^{-1}\) we get
 
 $$
 \begin{matrix}
@@ -360,7 +360,7 @@ v_1 - v_0 - 2 \frac{\dot{v}_0}{2} \delta t \\
 \end{bmatrix}
 $$
 
-Using the quintic polynamial and its derivatives we may compute now $d$, $\dot{d}$, $\ddot{d}$ as well as $s$, $\dot{s}$, $\ddot{s}$ in the Frenét frame.
+Using the quintic polynamial and its derivatives we may compute now \(d\), \(\dot{d}\), \(\ddot{d}\) as well as \(s), \(\dot{s}\), \(\ddot{s}\) in the Frenét frame.
 
 
 
@@ -452,11 +452,9 @@ The main difference to the cubic function is that function for acceleration is n
 
 ## Frenét to global cartesian coordinates
 
-The referenced paper describes well how to move from the Frenét frame to the global reference frame. In short: The optimal path vector is known. Its position and orientation can be used to rotate and translate the vectors $[s, d]^T$, $[\dot{s}, \dot{d}]^T$, $[\ddot{s}, \ddot{d}]^T$ to the desired reference.
+The referenced paper describes well how to move from the Frenét frame to the global reference frame. In short: The optimal path vector is known. Its position and orientation can be used to rotate and translate the vectors \([s, d]^T\), \([\dot{s}, \dot{d}]^T\), \([\ddot{s}, \ddot{d}]^T\) to the desired reference.
 
 ## Path Selection and Costs
-
-
 
 
 
