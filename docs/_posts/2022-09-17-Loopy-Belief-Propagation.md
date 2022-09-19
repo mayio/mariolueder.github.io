@@ -682,4 +682,6 @@ print(LoopyBeliefPropagation().marginal(v2))
 
 
 ## See Also
+ - Some slides for the topic http://www.cs.cmu.edu/~mgormley/bp-tutorial/
+ - A youtube video on the topic https://www.youtube.com/watch?v=B_ahqu50VjY
  - Python library [pgmpy](https://github.com/pgmpy/pgmpy) does probabilistic graphical models and has nice code!
