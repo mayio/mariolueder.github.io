@@ -1,4 +1,9 @@
-# Simple Noise Reduction with Loopy Belief Propagation
+---
+layout: post
+title: 'Simple Noise Reduction with Loopy Belief Propagation'
+date: '2022-09-24 16:00:00 +0200'
+categories: graph
+---
 
 I want to continue my previous [post](https://mayio.github.io/graph/2022/09/17/Loopy-Belief-Propagation.html) with a (useful) example to get more a feel how to use Loopy Belief Propagation in practice. 
 
