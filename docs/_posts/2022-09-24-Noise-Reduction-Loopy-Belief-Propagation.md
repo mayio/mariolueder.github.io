@@ -75,7 +75,7 @@ Still I can simplify the code from previous [post](https://mayio.github.io/graph
 
 ### Graph implementation
 
-The graph must reflect the structure of the lattice. The observed factor nodes are 2x1 arrays. We add them to a array in the size of the image. The hidden factors (non shaded) are 2x2 arrays. It turns out that we don't need to reserve space in the lattice for these factors as they are everywhere the same. Defining only one is enough. For each observed pixel we need a variable that represents the final image of the size 2x1. Last, each node is connected at maximum to four (unshaded) factors. That means we need at maximum four additional incoming messages and four outgoing messages, each of the size of a 2x1 array, for each node. 
+The graph must reflect the structure of the lattice. The observed factor nodes are 2x1 arrays. We add them to a array in the size of the image. The hidden factors (non shaded) are 2x2 arrays. It turns out that we don't need to reserve space in the lattice for these factors as they are everywhere the same. Defining only one is enough. For each observed pixel we need a variable that represents the final belief of a pixel. This can also be expressed with a 2x1 array. Last, each node is connected at maximum to four (unshaded) factors. That means we need at maximum four additional incoming messages and four outgoing messages, each of the size of a 2x1 array, for each node. 
 
 A node element can be defined with an array containing 9 messages and 1 marginal, where each element is a 2x1 array like this:
 
