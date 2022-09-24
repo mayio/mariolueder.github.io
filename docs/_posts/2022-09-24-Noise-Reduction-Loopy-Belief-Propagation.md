@@ -273,7 +273,7 @@ $$
 p(x) \propto \prod_{f \in ne(x)}\mu_{f \to x}(x)
 $$
 
-This is very similar the  variable to factor message. Now we multiply all incoming messages element-wise.
+This is very similar to the computation of the variable to factor message. Now we multiply all incoming messages element-wise.
 
 
 ```python
