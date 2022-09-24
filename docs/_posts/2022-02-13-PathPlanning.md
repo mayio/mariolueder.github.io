@@ -26,7 +26,7 @@ Assume that a car is lateral misplaced from the desired lane and should return t
 ![Fig. 2 in Paper: Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenét Frame.](https://raw.githubusercontent.com/mayio/pathplanning/master/PathPlanningImages/FrenetFig2.png)
 *Fig. 2 in Paper: Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenét Frame.*
 
-By switching from Cartesian to the Frenét reference frame it is possible to formulate a one dimensional trajectory with the root point $\vec{r}$ along the center line, the perpendicular offset $$d$$ and the covered arc length $$s$$. Jerk can be now defined as the derivatives $$\dddot{d}$$ and $$\dddot{s}$$. 
+By switching from Cartesian to the Frenét reference frame it is possible to formulate a one dimensional trajectory with the root point $$\vec{r}$$ along the center line, the perpendicular offset $$d$$ and the covered arc length $$s$$. Jerk can be now defined as the derivatives $$\dddot{d}$$ and $$\dddot{s}$$. 
 
 ## Quintic Polynomials
 
@@ -456,10 +456,3 @@ The main difference to the cubic function is that function for acceleration is n
 
 The referenced paper describes well how to move from the Frenét frame to the global reference frame. In short: The optimal path vector is known. Its position and orientation can be used to rotate and translate the vectors $$[s, d]^T$$, $$[\dot{s}, \dot{d}]^T$$, $$[\ddot{s}, \ddot{d}]^T$$ to the desired reference.
 
-## Path Selection and Costs
-
-
-
-```python
-
-```
