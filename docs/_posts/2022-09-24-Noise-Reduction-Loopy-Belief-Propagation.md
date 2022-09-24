@@ -326,7 +326,8 @@ for n_iter in range(iterations):
     # continue with factor to variable message.
     for i in range(n_rows):
         for j in range(n_cols):
-            # we have to iterate over all available neighbors of a factor
+            # we have to iterate over all available neighbors of a variable
+            # to compute all factor to variable messages
             for k in range(4):
                 factor_to_variable_message(i, j, k, n_rows, n_cols)
 
