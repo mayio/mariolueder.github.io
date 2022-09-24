@@ -11,7 +11,7 @@ The aim is to remove noise from an image - which is only a toy example.
 
 <!--more-->
 
-Please the see the [References](#references). I have taken the ideas from there. My contribution is only to give an example of their work coded in python for learning purposes.
+Please see the [References](#references). I have taken the ideas from there. My contribution is only to give an example of their work coded in python for learning purposes.
 
 ## Graph
 
