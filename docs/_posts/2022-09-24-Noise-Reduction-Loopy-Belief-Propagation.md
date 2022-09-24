@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Simple Noise Reduction with Loopy Belief Propagation'
-date: '2022-09-24 16:00:00 +0200'
+date: '2022-09-24 00:00:00 +0200'
 categories: graph
 ---
 
