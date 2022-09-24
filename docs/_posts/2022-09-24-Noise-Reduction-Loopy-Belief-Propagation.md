@@ -187,7 +187,7 @@ See below how this is implemented for the lattice.
 
 #### Variable to Factor
 
-The incoming messages of a variable (coming from the hidden (unshaded) and observed (shaded) factors) are simply multiplied element-wise, excluding the incoming messge from factor we want to send the message to. 
+The incoming messages of a variable (coming from the hidden (unshaded) and observed (shaded) factors) are simply multiplied element-wise, excluding the incoming message from the factor we want to send the message to. 
 
 You will find a normaliziation in the code below. That is actually not needed. But without we would run into numerical problems as the multiplication makes the values small. One would compute these values rather in log-space to avoid numerical problems.
 
@@ -228,7 +228,7 @@ def variable_to_factor_message(i, j, k, max_rows, max_cols):
 
 The hidden factors are indirectly accessed. We have to find the neighboring nodes and access the respective messages. If we have the right messages, we may do a simple matrix to vector multiplication here. There is even no need to transpose the factor depending on the edge direction as the factor is a symetric matrix.
 
-Again normalization is actually not needed. One might choose the sum of log-likelihoods for the product and use the log-sum-exp trick for the summation.
+Again, the normalization is actually not needed. One might choose the sum of log-likelihoods for the product and use the log-sum-exp trick for the summation.
 
 
 ```python
