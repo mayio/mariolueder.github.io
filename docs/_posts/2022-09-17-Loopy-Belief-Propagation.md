@@ -5,7 +5,11 @@ date: '2022-09-17 11:02:00 +0200'
 categories: graph
 ---
 
-The most parts were done by Jessical Stringham in her Notebook [here](https://jessicastringham.net/2019/01/09/sum-product-message-passing). I adapted it only a little to experiment with loopy belief propagation and gave examples to show how the products of the distributions must be calculated. Most credits are hers! I am really thankful that she has provided such a comprehensive example and explanation.
+This is about how to implement Loopy Belief Propagation in Python and to understand the calculations in detail.
+
+<!--more-->
+
+The most parts were done by Jessical Stringham in her Notebook [here](https://jessicastringham.net/2019/01/09/sum-product-message-passing). I adapted it only a little to experiment with loopy belief propagation and added examples to show how the products of the distributions must be calculated. Most credits are hers! I am really thankful that she has provided such a comprehensive example and explanation.
 
 ## Motivation
 
