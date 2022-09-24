@@ -4,3 +4,9 @@
 
 layout: home
 ---
+
+{%- for post in site.posts  -%}
+  <p>Title: {{ post.title }}</p>
+  <p>Excerpt: {{ post.excerpt }}</p>
+  <p></p>
+{%- endfor- %}
