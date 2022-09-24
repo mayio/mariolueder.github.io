@@ -682,7 +682,13 @@ print(LoopyBeliefPropagation().marginal(v2))
     [0.23 0.77]
 
 
+## What's next
+
+Loopy Belief Propagation doesn't make much sense so far as the graph doesn't contain loops. We could just show that it converges to the same result as the non-loopy version. A better application of Loopy Belief Propagation is shown and explained step by step [here](https://mayio.github.io/graph/2022/09/23/Noise-Reduction-Loopy-Belief-Propagation.html) on my blog
+
+
 ## See Also
  - Some slides for the topic http://www.cs.cmu.edu/~mgormley/bp-tutorial/
  - A youtube video on the topic https://www.youtube.com/watch?v=B_ahqu50VjY
  - Python library [pgmpy](https://github.com/pgmpy/pgmpy) does probabilistic graphical models and has nice code!
+ - Simple Noise Reduction with [Loopy Belief Propagation](https://mayio.github.io/graph/2022/09/23/Noise-Reduction-Loopy-Belief-Propagation.html)
