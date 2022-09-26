@@ -372,3 +372,4 @@ plt.show()
  - [Understanding Belief Propogation and its Generalizations](http://people.csail.mit.edu/billf/publications/Understanding_Belief_Propogation.pdf) by Jonathan S. Yedidia, William T. Freeman, and Yair Weiss
  - [Loopy Belief Propagation in Image-Based Rendering](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.88.6471&rep=rep1&type=pdf) by Dana Sharon
  - [Variational Inference: Loopy Belief Propagation](https://www.cs.cmu.edu/~epxing/Class/10708-14/scribe_notes/scribe_note_lecture13.pdf) by  Eric P. Xing 
+ - Stereo Matching with Loopy Belief Propagation [blog](http://nghiaho.com/?page_id=1366)
