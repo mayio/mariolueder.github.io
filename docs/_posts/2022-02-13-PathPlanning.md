@@ -11,7 +11,7 @@ The idea comes from paper 
 
 > Werling, M., Ziegler, J., Kammel, S., & Thrun, S. Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenét Frame. 
 
-I would like to show in detail how this is put into practice. I will omit all references to this paper in this article, as all ideas coming from there or the referenced documents.
+I would like to show in detail how this is put into practice. I will omit all further references to this paper in this article, as the ideas coming from there.
 
 Maneuvers of a car shall be as smooth as possible. Hard turns or hard deceleration are only required in dangerous situations. Thus, we need a function that minimizes Jerk, which is used in physics to describe how much the acceleration changes.
 
