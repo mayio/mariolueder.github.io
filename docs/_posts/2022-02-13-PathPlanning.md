@@ -4,7 +4,6 @@ title: 'Path Planning with Quintic Functions in Frenét Coordinate System'
 date: '2022-02-13 11:02:00 +0200'
 categories: pathplanning
 ---
-# Path Planning with Quintic Functions in Frenét Coordinate System
 
 This is an introduction on how to compute a driving path for an autonomous vehicle. In this article, I focus only the trajectory creation. Obstacle perception and avoidance shall be out of scope.
 
@@ -12,11 +11,11 @@ The idea comes from paper 
 
 > Werling, M., Ziegler, J., Kammel, S., & Thrun, S. Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenét Frame. 
 
-<!--more-->
-
 I would like to show in detail how this is put into practice. I will omit all references to this paper in this article, as all ideas coming from there or the referenced documents.
 
-Maneuvers of a car shall be as smooth as possible. Hard turns or hard deceleration are only required in dangerous situations. Thus, we need a function that minimizes   Jerk, which is used in physics to describe how much the acceleration changes.
+Maneuvers of a car shall be as smooth as possible. Hard turns or hard deceleration are only required in dangerous situations. Thus, we need a function that minimizes Jerk, which is used in physics to describe how much the acceleration changes.
+
+<!--more-->
 
 ## Frenét Frame
 
