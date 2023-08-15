@@ -39,6 +39,9 @@ plugins:
 
 exclude: ['*.ipynb', '*.png']
 
+# Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
