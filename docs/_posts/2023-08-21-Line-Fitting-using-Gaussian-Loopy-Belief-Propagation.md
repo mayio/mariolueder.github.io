@@ -2,6 +2,8 @@ Gaussian Belief Propagation is a variant of Belief Propagation and used for infe
 
 This article describes the implementation of the inference of a piecewiese separated Line using Gaussian Loopy Belief Propagation. The example is taken from [A visual introduction to Gaussian Belief Propagation](https://gaussianbp.github.io/). I show here a stripped version of Joseph Ortiz's [notebook](https://colab.research.google.com/drive/1-nrE95X4UC9FBLR0-cTnsIP_XhA_PZKW?usp=sharing) in hope to make the implementation more comprehensible. My contribution is to explain what is going on in the code and relate it to the formulas and algorithms given in the [introduction](https://gaussianbp.github.io/) as the notebook contains mostly only code (as of now).
 
+<!--more-->
+
 Please use the original notebook, if you want to experiment. It provides a very nice framework and you might want to use the functions I have deleted.
 
 Please see also my other articles on the topic if you are not familiar with Belief Propagation. They provide very simple implementations of the disrete cases.
