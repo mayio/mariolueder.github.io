@@ -34,8 +34,7 @@ github_username:  mayio
 theme: minima
 plugins:
   - jekyll-feed
- 
-# - jekyll-sitemap
+  - jekyll-sitemap
 
 exclude: ['*.ipynb', '*.png']
 

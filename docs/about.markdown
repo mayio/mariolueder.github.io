@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /mariolueder/
 ---
 
 Hi! I am Mario Lüder, a software engineer working in the field of object tracking for autonomous driving in Hamburg, Germany. The goal is to estimate the pose and kinematics of dynamic objects and small obstacles in the surrounding environment of a car using point clouds coming from multiple solid state Lidar scanners. Over the past years I am became experienced in the fields of Multiple Extended Target Tracking and Clustering, which is related to a probabilistic perspective of Machine Learning.
