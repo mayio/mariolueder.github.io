@@ -92,7 +92,7 @@ class Gaussian:
 
 ### Loss functions
 
-We define two loss functions here. The usual SquaredLoss and Huber. This is to see the different effects for the different loss functions.
+We define two loss functions here. [Squared or quadratic error loss](https://en.wikipedia.org/wiki/Loss_function) and [Huber loss](https://en.wikipedia.org/wiki/Huber_loss). This is to see the different effects for the different loss functions.
 
 You'll find in the section [Factor Node](#Factor-Node) how the loss function is used.
 
@@ -449,7 +449,7 @@ class VariableNode:
         return energy
 ```
 
-### Factor Node
+### <a name="Factor-Node"></a> Factor Node
 
 Consists of:
 * id
@@ -474,7 +474,7 @@ The Jacobian $$J$$ is computed using the Jacobian function of the the given meas
 
 Next, the predicted measurement $$x$$ is computed by the measurement model given the linearization point $$\mu$$. Please see below in the [Line Fitting](#Line-Fitting) section how the measurement model and linearization function are defined.
 
-The loss function is provided as a covariance $$\Sigma_L$$.In case of Huber loss we need the residual $$x - z$$, where $$z$$ is the measurement attached to the factor, to get the effective loss. The residual doesn't play any role in case the squared loss is used. The unchanged loss covariance is used then. As the Gaussian are computed in canonical form we need the inverse of the covariance $$\Sigma_L$$, which is the precision matrix $$\Lambda_L$$.
+The loss function is provided as a covariance $$\Sigma_L$$.In case of [Huber loss](https://en.wikipedia.org/wiki/Huber_loss) we need the residual $$x - z$$, where $$z$$ is the measurement attached to the factor, to get the effective loss. The residual doesn't play any role in case the squared loss is used. The unchanged loss covariance is used then. As the Gaussian are computed in canonical form we need the inverse of the covariance $$\Sigma_L$$, which is the precision matrix $$\Lambda_L$$.
 
 The new $$\Lambda_f$$ and $$\eta_f$$ for the factor are then:
 
@@ -742,7 +742,7 @@ class Factor:
 
 ```
 
-## Line Fitting
+## <a name="Line-Fitting"></a> Line Fitting
 
 How Guassian belief propagation works is shown here on the example of piecewise linear function fitting. We place in equal distance a number of variable nodes along the x-axis. Each node is defined as a one dimensional gaussian component. Its mean is the height or y-position. A number of random measurement that follow a noisy sinus curve are used to estimate the beliefs of the nodes.
 
