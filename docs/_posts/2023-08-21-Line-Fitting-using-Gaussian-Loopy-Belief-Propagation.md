@@ -25,7 +25,7 @@ from typing import List, Callable, Optional, Union
 
 ### Gaussian Component
 
-We store here the gaussian component using the canonical parameters $$\eta$$$ and $$\Lambda$$.
+We store here the gaussian component using the canonical parameters $$\eta$$ and $$\Lambda$$.
 
 The relation to the $$\mu$$ (mean) and $$\Sigma$$ (covariance) is:
 
@@ -468,13 +468,13 @@ The degrees of freedom of a factor node is the sum of the degrees of freedom of 
 
 The function `compute_factor` computes, as the name says, the $$\eta$$ and $$\Lambda$$ of the factor. This is done first at initialization and after a certain number of iterations if the measurement model is not linear.
 
-First, we need the linearization point $$\mu$. This is the concatenated mean of the beliefs of the adjacent variable nodes.
+First, we need the linearization point $$\mu$$. This is the concatenated mean of the beliefs of the adjacent variable nodes.
 
 The Jacobian $$J$$ is computed using the Jacobian function of the the given measurement model. The linearization point $$\mu$$ is given for general purposes. We won't need this argument in our line fitting example below.
 
-Next, the predicted measurement $$x$$ is computed by the measurement model given the linearization point $$\mu$. Please see below in the [Line Fitting](#Line-Fitting) section how the measurement model and linearization function are defined.
+Next, the predicted measurement $$x$$ is computed by the measurement model given the linearization point $$\mu$$. Please see below in the [Line Fitting](#Line-Fitting) section how the measurement model and linearization function are defined.
 
-The loss function is provided as a covariance $$\Sigma_L$. In case of Huber loss we need the residual $$x - z$, where $$z$$ is the measurement attached to the factor, to get the effective loss. The residual doesn't play any role in case the squared loss is used. The unchanged loss covariance is used then. As the Gaussian are computed in canonical form we need the inverse of the covariance $$\Sigma_L$, which is the precision matrix $$\Lambda_L$$.
+The loss function is provided as a covariance $$\Sigma_L$$.In case of Huber loss we need the residual $$x - z$$, where $$z$$ is the measurement attached to the factor, to get the effective loss. The residual doesn't play any role in case the squared loss is used. The unchanged loss covariance is used then. As the Gaussian are computed in canonical form we need the inverse of the covariance $$\Sigma_L$$, which is the precision matrix $$\Lambda_L$$.
 
 The new $$\Lambda_f$$ and $$\eta_f$$ for the factor are then:
 
@@ -500,9 +500,9 @@ $$\mu_{f \to x}(x) = \sum_{\chi_f \setminus x}\phi_f(\chi_f) \prod_{y \in \{ne(f
 
 where $$\phi_f(\chi_f)$$ is the probability distribution associated with the factor, and $$\sum_{\chi_f \setminus x}$$ sums over all variables except $$x$$ which is called marginalization.
 
-First, we have to compute the product of the factor with all incoming messages from the adjacent variable nodes except the one coming from the variable node $$x$.
+First, we have to compute the product of the factor with all incoming messages from the adjacent variable nodes except the one coming from the variable node $$x$$.
 
-Consider a factor $$f$$ is connected to two variable nodes $$x_1$$ and $$x_2$. We want to compute the message to $$x_1$. The Gaussian parameters of the factor are then:
+Consider a factor $$f$$ is connected to two variable nodes $$x_1$$ and $$x_2$$. We want to compute the message to $$x_1$$. The Gaussian parameters of the factor are then:
 
 $$
 \eta_f =
@@ -536,7 +536,7 @@ $$
 
 The $$\eta_{x_i \to f}$$ is the $$\eta$$ of the i'th variable node belief minus the $$\eta$$ of the respective outgoing message from the factor to the i'th variable node. Similarly $$\Lambda_{x_i \to f}$$ is the difference of the $$\Lambda$$ of the i'th variable node belief and the $$\Lambda$$ of the respective outgoing message from the factor to the i'th variable node.
 
-In the second step we have to marginalize out all variables except $$x_1$, which is the receiving node. The marginalization of Gaussian distributions is described in [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by Bishop. See 2.3.2 Marginal Gaussian distributions page 88. The canonical form is given by Ryan M. Eustice et. al. [Exactly Sparse Delayed-State Filters](https://www.researchgate.net/publication/221077974_Exactly_Sparse_Delayed-State_Filters)
+In the second step we have to marginalize out all variables except $$x_1$$, which is the receiving node. The marginalization of Gaussian distributions is described in [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by Bishop. See 2.3.2 Marginal Gaussian distributions page 88. The canonical form is given by Ryan M. Eustice et. al. [Exactly Sparse Delayed-State Filters](https://www.researchgate.net/publication/221077974_Exactly_Sparse_Delayed-State_Filters)
 
 Given a joint distribution of the variables $$x_a$$ and $$x_b$$ with the parameters
 
