@@ -1,201 +1,3 @@
-```python
-!jupyter nbconvert --to markdown /content/drive/MyDrive/Colab Notebooks/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation.ipynb
-```
-
-    [NbConvertApp] WARNING | pattern '/content/drive/MyDrive/Colab' matched no files
-    [NbConvertApp] WARNING | pattern 'Notebooks/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation.ipynb' matched no files
-    This application is used to convert notebook files (*.ipynb)
-            to various other formats.
-    
-            WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
-    
-    Options
-    =======
-    The options below are convenience aliases to configurable class-options,
-    as listed in the "Equivalent to" description-line of the aliases.
-    To see all configurable class-options for some <cmd>, use:
-        <cmd> --help-all
-    
-    --debug
-        set log level to logging.DEBUG (maximize logging output)
-        Equivalent to: [--Application.log_level=10]
-    --show-config
-        Show the application's configuration (human-readable format)
-        Equivalent to: [--Application.show_config=True]
-    --show-config-json
-        Show the application's configuration (json format)
-        Equivalent to: [--Application.show_config_json=True]
-    --generate-config
-        generate default config file
-        Equivalent to: [--JupyterApp.generate_config=True]
-    -y
-        Answer yes to any questions instead of prompting.
-        Equivalent to: [--JupyterApp.answer_yes=True]
-    --execute
-        Execute the notebook prior to export.
-        Equivalent to: [--ExecutePreprocessor.enabled=True]
-    --allow-errors
-        Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if '--execute' was specified, too.
-        Equivalent to: [--ExecutePreprocessor.allow_errors=True]
-    --stdin
-        read a single notebook file from stdin. Write the resulting notebook with default basename 'notebook.*'
-        Equivalent to: [--NbConvertApp.from_stdin=True]
-    --stdout
-        Write notebook output to stdout instead of files.
-        Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
-    --inplace
-        Run nbconvert in place, overwriting the existing notebook (only
-                relevant when converting to notebook format)
-        Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
-    --clear-output
-        Clear output of current file and save in place,
-                overwriting the existing notebook.
-        Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
-    --no-prompt
-        Exclude input and output prompts from converted document.
-        Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
-    --no-input
-        Exclude input cells and output prompts from converted document.
-                This mode is ideal for generating code-free reports.
-        Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True --TemplateExporter.exclude_input_prompt=True]
-    --allow-chromium-download
-        Whether to allow downloading chromium if no suitable version is found on the system.
-        Equivalent to: [--WebPDFExporter.allow_chromium_download=True]
-    --disable-chromium-sandbox
-        Disable chromium security sandbox when converting to PDF..
-        Equivalent to: [--WebPDFExporter.disable_sandbox=True]
-    --show-input
-        Shows code input. This flag is only useful for dejavu users.
-        Equivalent to: [--TemplateExporter.exclude_input=False]
-    --embed-images
-        Embed the images as base64 dataurls in the output. This flag is only useful for the HTML/WebPDF/Slides exports.
-        Equivalent to: [--HTMLExporter.embed_images=True]
-    --sanitize-html
-        Whether the HTML in Markdown cells and cell outputs should be sanitized..
-        Equivalent to: [--HTMLExporter.sanitize_html=True]
-    --log-level=<Enum>
-        Set the log level by value or name.
-        Choices: any of [0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL']
-        Default: 30
-        Equivalent to: [--Application.log_level]
-    --config=<Unicode>
-        Full path of a config file.
-        Default: ''
-        Equivalent to: [--JupyterApp.config_file]
-    --to=<Unicode>
-        The export format to be used, either one of the built-in formats
-                ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'rst', 'script', 'slides', 'webpdf']
-                or a dotted object name that represents the import path for an
-                ``Exporter`` class
-        Default: ''
-        Equivalent to: [--NbConvertApp.export_format]
-    --template=<Unicode>
-        Name of the template to use
-        Default: ''
-        Equivalent to: [--TemplateExporter.template_name]
-    --template-file=<Unicode>
-        Name of the template file to use
-        Default: None
-        Equivalent to: [--TemplateExporter.template_file]
-    --theme=<Unicode>
-        Template specific theme(e.g. the name of a JupyterLab CSS theme distributed
-        as prebuilt extension for the lab template)
-        Default: 'light'
-        Equivalent to: [--HTMLExporter.theme]
-    --sanitize_html=<Bool>
-        Whether the HTML in Markdown cells and cell outputs should be sanitized.This
-        should be set to True by nbviewer or similar tools.
-        Default: False
-        Equivalent to: [--HTMLExporter.sanitize_html]
-    --writer=<DottedObjectName>
-        Writer class used to write the
-                                            results of the conversion
-        Default: 'FilesWriter'
-        Equivalent to: [--NbConvertApp.writer_class]
-    --post=<DottedOrNone>
-        PostProcessor class used to write the
-                                            results of the conversion
-        Default: ''
-        Equivalent to: [--NbConvertApp.postprocessor_class]
-    --output=<Unicode>
-        overwrite base name use for output files.
-                    can only be used when converting one notebook at a time.
-        Default: ''
-        Equivalent to: [--NbConvertApp.output_base]
-    --output-dir=<Unicode>
-        Directory to write output(s) to. Defaults
-                                      to output to the directory of each notebook. To recover
-                                      previous default behaviour (outputting to the current
-                                      working directory) use . as the flag value.
-        Default: ''
-        Equivalent to: [--FilesWriter.build_directory]
-    --reveal-prefix=<Unicode>
-        The URL prefix for reveal.js (version 3.x).
-                This defaults to the reveal CDN, but can be any url pointing to a copy
-                of reveal.js.
-                For speaker notes to work, this must be a relative path to a local
-                copy of reveal.js: e.g., "reveal.js".
-                If a relative path is given, it must be a subdirectory of the
-                current directory (from which the server is run).
-                See the usage documentation
-                (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
-                for more details.
-        Default: ''
-        Equivalent to: [--SlidesExporter.reveal_url_prefix]
-    --nbformat=<Enum>
-        The nbformat version to write.
-                Use this to downgrade notebooks.
-        Choices: any of [1, 2, 3, 4]
-        Default: 4
-        Equivalent to: [--NotebookExporter.nbformat_version]
-    
-    Examples
-    --------
-    
-        The simplest way to use nbconvert is
-    
-                > jupyter nbconvert mynotebook.ipynb --to html
-    
-                Options include ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'rst', 'script', 'slides', 'webpdf'].
-    
-                > jupyter nbconvert --to latex mynotebook.ipynb
-    
-                Both HTML and LaTeX support multiple output templates. LaTeX includes
-                'base', 'article' and 'report'.  HTML includes 'basic', 'lab' and
-                'classic'. You can specify the flavor of the format used.
-    
-                > jupyter nbconvert --to html --template lab mynotebook.ipynb
-    
-                You can also pipe the output to stdout, rather than a file
-    
-                > jupyter nbconvert mynotebook.ipynb --stdout
-    
-                PDF is generated via latex
-    
-                > jupyter nbconvert mynotebook.ipynb --to pdf
-    
-                You can get (and serve) a Reveal.js-powered slideshow
-    
-                > jupyter nbconvert myslides.ipynb --to slides --post serve
-    
-                Multiple notebooks can be given at the command line in a couple of
-                different ways:
-    
-                > jupyter nbconvert notebook*.ipynb
-                > jupyter nbconvert notebook1.ipynb notebook2.ipynb
-    
-                or you can specify the notebooks list in a config file, containing::
-    
-                    c.NbConvertApp.notebooks = ["my_notebook.ipynb"]
-    
-                > jupyter nbconvert --config mycfg.py
-    
-    To see all available configurables, use `--help-all`.
-    
-
-
-# Line Fitting using Gaussian Loopy Belief Propagation
-
 Gaussian Belief Propagation is a variant of Belief Propagation and used for inference on graphical models if the underlying distribution is described as a Gaussian.
 
 This article describes the implementation of the inference of a piecewiese separated Line using Gaussian Loopy Belief Propagation. The example is taken from [A visual introduction to Gaussian Belief Propagation](https://gaussianbp.github.io/). I show here a stripped version of Joseph Ortiz's [notebook](https://colab.research.google.com/drive/1-nrE95X4UC9FBLR0-cTnsIP_XhA_PZKW?usp=sharing) in hope to make the implementation more comprehensible. My contribution is to explain what is going on in the code and relate it to the formulas and algorithms given in the [introduction](https://gaussianbp.github.io/) as the notebook contains mostly only code (as of now).
@@ -223,9 +25,9 @@ from typing import List, Callable, Optional, Union
 
 ### Gaussian Component
 
-We store here the gaussian component using the canonical parameters $\eta$ and $\Lambda$.
+We store here the gaussian component using the canonical parameters $$\eta$$$ and $$\Lambda$$.
 
-The relation to the $\mu$ (mean) and $\Sigma$ (covariance) is:
+The relation to the $$\mu$$ (mean) and $$\Sigma$$ (covariance) is:
 
 $$
 \Lambda = \Sigma^{-1} \qquad \text{and} \qquad \eta = \Lambdaμ
@@ -605,7 +407,7 @@ A variable node consists of
 * its belief, which is a Gaussian component
 * a prior, which is also a  Gaussian component
 
-The belief of the node is updated with `update_belief`. It takes the product of all incoming messages, which is implemented as a sum of the $\eta$ and a sum of the $\Lambda$ of the outgoing messages from the adjacent factors to a variable node.
+The belief of the node is updated with `update_belief`. It takes the product of all incoming messages, which is implemented as a sum of the $$\eta$$ and a sum of the $$\Lambda$$ of the outgoing messages from the adjacent factors to a variable node.
 
 $$\eta_{b_{i}} = \sum_{g \in ne(x) } \eta_{g \to x}$$
 
@@ -664,17 +466,17 @@ The degrees of freedom of a factor node is the sum of the degrees of freedom of 
 
 #### compute_factor
 
-The function `compute_factor` computes, as the name says, the $\eta$ and $\Lambda$ of the factor. This is done first at initialization and after a certain number of iterations if the measurement model is not linear.
+The function `compute_factor` computes, as the name says, the $$\eta$$ and $$\Lambda$$ of the factor. This is done first at initialization and after a certain number of iterations if the measurement model is not linear.
 
-First, we need the linearization point $\mu$. This is the concatenated mean of the beliefs of the adjacent variable nodes.
+First, we need the linearization point $$\mu$. This is the concatenated mean of the beliefs of the adjacent variable nodes.
 
-The Jacobian $J$ is computed using the Jacobian function of the the given measurement model. The linearization point $\mu$ is given for general purposes. We won't need this argument in our line fitting example below.
+The Jacobian $$J$$ is computed using the Jacobian function of the the given measurement model. The linearization point $$\mu$$ is given for general purposes. We won't need this argument in our line fitting example below.
 
-Next, the predicted measurement $x$ is computed by the measurement model given the linearization point $\mu$. Please see below in the [Line Fitting](#Line-Fitting) section how the measurement model and linearization function are defined.
+Next, the predicted measurement $$x$$ is computed by the measurement model given the linearization point $$\mu$. Please see below in the [Line Fitting](#Line-Fitting) section how the measurement model and linearization function are defined.
 
-The loss function is provided as a covariance $\Sigma_L$. In case of Huber loss we need the residual $x - z$, where $z$ is the measurement attached to the factor, to get the effective loss. The residual doesn't play any role in case the squared loss is used. The unchanged loss covariance is used then. As the Gaussian are computed in canonical form we need the inverse of the covariance $\Sigma_L$, which is the precision matrix $\Lambda_L$.
+The loss function is provided as a covariance $$\Sigma_L$. In case of Huber loss we need the residual $$x - z$, where $$z$$ is the measurement attached to the factor, to get the effective loss. The residual doesn't play any role in case the squared loss is used. The unchanged loss covariance is used then. As the Gaussian are computed in canonical form we need the inverse of the covariance $$\Sigma_L$, which is the precision matrix $$\Lambda_L$$.
 
-The new $\Lambda_f$ and $\eta_f$ for the factor are then:
+The new $$\Lambda_f$$ and $$\eta_f$$ for the factor are then:
 
 $$
 \Lambda_L = \Sigma_L^{-1}
@@ -696,11 +498,11 @@ The factor-to-variable message is given by
 
 $$\mu_{f \to x}(x) = \sum_{\chi_f \setminus x}\phi_f(\chi_f) \prod_{y \in \{ne(f) \setminus x \}} \mu_{y \to f}(y)$$
 
-where $\phi_f(\chi_f)$ is the probability distribution associated with the factor, and $\sum_{\chi_f \setminus x}$ sums over all variables except $x$ which is called marginalization.
+where $$\phi_f(\chi_f)$$ is the probability distribution associated with the factor, and $$\sum_{\chi_f \setminus x}$$ sums over all variables except $$x$$ which is called marginalization.
 
-First, we have to compute the product of the factor with all incoming messages from the adjacent variable nodes except the one coming from the variable node $x$.
+First, we have to compute the product of the factor with all incoming messages from the adjacent variable nodes except the one coming from the variable node $$x$.
 
-Consider a factor $f$ is connected to two variable nodes $x_1$ and $x_2$. We want to compute the message to $x_1$. The Gaussian parameters of the factor are then:
+Consider a factor $$f$$ is connected to two variable nodes $$x_1$$ and $$x_2$. We want to compute the message to $$x_1$. The Gaussian parameters of the factor are then:
 
 $$
 \eta_f =
@@ -732,11 +534,11 @@ $$
 \end{bmatrix}
 $$
 
-The $\eta_{x_i \to f}$ is the $\eta$ of the i'th variable node belief minus the $\eta$ of the respective outgoing message from the factor to the i'th variable node. Similarly $\Lambda_{x_i \to f}$ is the difference of the $\Lambda$ of the i'th variable node belief and the $\Lambda$ of the respective outgoing message from the factor to the i'th variable node.
+The $$\eta_{x_i \to f}$$ is the $$\eta$$ of the i'th variable node belief minus the $$\eta$$ of the respective outgoing message from the factor to the i'th variable node. Similarly $$\Lambda_{x_i \to f}$$ is the difference of the $$\Lambda$$ of the i'th variable node belief and the $$\Lambda$$ of the respective outgoing message from the factor to the i'th variable node.
 
-In the second step we have to marginalize out all variables except $x_1$, which is the receiving node. The marginalization of Gaussian distributions is described in [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by Bishop. See 2.3.2 Marginal Gaussian distributions page 88. The canonical form is given by Ryan M. Eustice et. al. [Exactly Sparse Delayed-State Filters](https://www.researchgate.net/publication/221077974_Exactly_Sparse_Delayed-State_Filters)
+In the second step we have to marginalize out all variables except $$x_1$, which is the receiving node. The marginalization of Gaussian distributions is described in [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) by Bishop. See 2.3.2 Marginal Gaussian distributions page 88. The canonical form is given by Ryan M. Eustice et. al. [Exactly Sparse Delayed-State Filters](https://www.researchgate.net/publication/221077974_Exactly_Sparse_Delayed-State_Filters)
 
-Given a joint distribution of the variables $x_a$ and $x_b$ with the parameters
+Given a joint distribution of the variables $$x_a$$ and $$x_b$$ with the parameters
 
 $$
 \eta =
@@ -752,7 +554,7 @@ $$
 \end{bmatrix}
 $$
 
-$b$ is marginalized out using
+$$b$$ is marginalized out using
 
 $$
 \bar{\eta_a} =  \eta_a - \Lambda_{ab} \Lambda_{bb}^{-1} \eta_{b}
@@ -760,7 +562,7 @@ $$
 \bar{\Lambda_a} = \Lambda_{aa} - \Lambda_{ab} \Lambda_{bb}^{-1} \Lambda_{ba}
 $$
 
-This requires in general to reorder $\eta_f'$ and $\lambda_f'$ to have the output variable on top.
+This requires in general to reorder $$\eta_f'$$ and $$\lambda_f'$$ to have the output variable on top.
 
 
 ```python
@@ -946,18 +748,18 @@ How Guassian belief propagation works is shown here on the example of piecewise 
 
 ### Create custom factors
 
-We we create two types of factors. One for smoothing the mean of adjacent nodes $x$ and one that incorporates the height measurement. Each factor is connected to two adjacent nodes.
+We we create two types of factors. One for smoothing the mean of adjacent nodes $$x$$ and one that incorporates the height measurement. Each factor is connected to two adjacent nodes.
 
-The predicted mean is computed with the height measurement function. It takes the height of the belief of the adjacent nodes and uses the $\gamma$ (a scalar) to compute the new mean.
+The predicted mean is computed with the height measurement function. It takes the height of the belief of the adjacent nodes and uses the $$\gamma$$ (a scalar) to compute the new mean.
 
 $$ J = [1 - \gamma, \gamma] $$
 $$ \bar{\mu} = J \mu$$
 
-where $\gamma$ is the the relative distance in x-direction of the measurement $z$ to left nearest variable node.
+where $$\gamma$$ is the the relative distance in x-direction of the measurement $$z$$ to left nearest variable node.
 
 $$ \gamma = \frac{z^{(x)} - x_i^{(x)}}{x_{i+1}^{(x)} - x_{i}^{(x)}}$$
 
-The Jacobian of the height measurement model is just $J$ and is linear.
+The Jacobian of the height measurement model is just $$J$$ and is linear.
 
 The measurement model for smoothing computes just the difference between the mean of two adjacent variable nodes.
 
@@ -1041,7 +843,7 @@ plt.show()
 
 
     
-![png](2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_files/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_24_0.png)
+![png](https://raw.githubusercontent.com/mayio/mayio.github.io/master/docs/_posts/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_files/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_24_0.png)
     
 
 
@@ -1109,17 +911,9 @@ plt.show()
     # Variable nodes: 20
     # Factors: 34
     
-    
-
-
-
-    
-![png](2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_files/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_26_1.png)
-    
-
+![png](https://raw.githubusercontent.com/mayio/mayio.github.io/master/docs/_posts/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_files/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_26_1.png)
 
 ### Solve with GBP
-
 
 ```python
 fg.gbp_solve(n_iters=50)
@@ -1131,8 +925,6 @@ plt.scatter(meas_x, meas_y, color="red", label="Measurements", marker=".")
 plt.legend()
 plt.show()
 ```
-
-    
     Initial Energy 49.21330
     Iter 1  --- Energy 27.81385 --- 
     Iter 2  --- Energy 23.62700 --- 
@@ -1161,13 +953,8 @@ plt.show()
     Iter 25  --- Energy 13.41827 --- 
     Iter 26  --- Energy 13.41827 --- 
 
-
-
+![png](https://raw.githubusercontent.com/mayio/mayio.github.io/master/docs/_posts/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_files/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_28_1.png)
     
-![png](2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_files/2023-08-21-Line-Fitting-using-Gaussian-Loopy-Belief-Propagation_28_1.png)
-    
-
-
 ## References
 
 * [A visual introduction to Gaussian Belief Propagation](https://gaussianbp.github.io/) by Joseph Ortiz, Talfan Evans and Andrew J. Davison
